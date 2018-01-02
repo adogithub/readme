@@ -1,6 +1,6 @@
 # Lender Simulator (LS) #
 
-The LenderSimulator (LS) provides a WSDL endpoint able to accept requests and generate responses whose behaviour is configurable by means of a extensible configuration files. 
+The *LenderSimulator (LS)* provides a WSDL endpoint able to accept requests and generate responses whose behaviour is configurable by means of a extensible configuration files. 
 
 The very first endpoint selected is Fortiva, the LS allows the QLOL decision engine to build the requests. 
 The LS supports proxying requests to the actual Fortiva endpoint(s) if a flag is set.
