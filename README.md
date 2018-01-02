@@ -18,7 +18,14 @@ The main construct behind the ability of the ***LS*** to accomodate a variety of
 The ***Validations Matrix*** is structured as follows: For each combination of (1) *Request Type*; (2) *Field Name* and (3) *Lender* a specific *Field Value* that needs to be satisfied must be set.
 
 The field values can be of three different kinds:
--ExpectedValue: Is a constant that needs to exactly match with the corresponding entry in the request file.
+
+Field Type     | Description
+-------------  | -------------
+ExpectedValue  | Is a literal that needs to exactly match the corresponding entry provided in the request.
+Content Cell   | Content Cell
+
+
+-ExpectedValue: 
 -InListValue: Similar to ExpectedValue, but this time the constant is in the shape of a List. This is useful to stabish a range of valid values.
 -ComputationValue: This is a complex type that consists of a constant and an operation. Representing a computation.
 
