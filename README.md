@@ -28,7 +28,7 @@ ComputationValue | This is a complex type that is comprised by a constant and an
 #### Examples of field types
 #### Expected value
 
-Consider the following fields
+Consider the following three fields:
 ```
     "lookup.fields.names": [
       {
@@ -39,6 +39,15 @@ Consider the following fields
         "code": "language",
         "xpath": "clientInfo.language"
       }
+      ,
+      {
+        "code": "age",
+        "xpath": "clientInfo.age"
+      }
+    ],
+```
+This is a *ExpectedValue* type:
+```
       "lookup.fields.values": [
       {
         "kind": "expected", //leadGen
@@ -48,6 +57,11 @@ Consider the following fields
           [2] //LENDER TWO
         ]
       },
+      
+```
+This is a *InListValue* type:
+```
+      
       {
         "kind": "inCollection", //language
         "collection": [
@@ -56,6 +70,10 @@ Consider the following fields
           [[10, 11, 12]] //LENDER TWO
         ]
       },
+```
+This is a computation type:
+
+```    
       {
         "kind": "computation", //age
         "computation": [
