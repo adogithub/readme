@@ -22,14 +22,11 @@ The field values can be of three different kinds:
 Field Type     | Description
 -------------  | -------------
 ExpectedValue  | Is a literal that needs to exactly match the corresponding entry provided in the request.
-Content Cell   | Content Cell
+InListValue    | Similar to ExpectedValue, but this time the constant is in the shape of a List. This is useful to stabish a range of valid values.
+ComputationValue | This is a complex type that is comprised by a constant and an operation. 
+
+The ***Validations Matrix*** fulfils its purpose because it contains the proper configuration of each request type for each field name per lender; It's easy to include a new lender, request type or field name, since that would only imply adding a row or column to the matrix. It is flexible for different types of requests and lenders since, although all fields need to be filled, we can select the required fields for each Request Type of each Lender. Below a schematic picture of the Validations Matrix.
 
 
--ExpectedValue: 
--InListValue: Similar to ExpectedValue, but this time the constant is in the shape of a List. This is useful to stabish a range of valid values.
--ComputationValue: This is a complex type that consists of a constant and an operation. Representing a computation.
-
-
-The Validations Matrix fulfils its propouse because it contains the proper configuration of each request type for each field name per lender; It's easy to include a new lender, request type or field name, since that would only imply adding a row or column to the matrix. It is flexible to different types of requests and lenders since, although all fields need to be filled, we can select the required fields for each Request Type of each Lender. Below a schematic picture of the Validations Matrix.
 
 
