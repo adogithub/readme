@@ -25,7 +25,8 @@ ExpectedValue  | Is a literal that needs to exactly match the corresponding entr
 InListValue    | Similar to ExpectedValue, but this time the constant is in the shape of a List. This is useful to stabish a range of valid values.
 ComputationValue | This is a complex type that is comprised by a constant and an operation. 
 
-#### Examples
+#### Examples of field types
+
 
 The ***Validations Matrix*** fulfils its purpose because it contains the proper configuration of each request type for each field name per lender; It's easy to include a new lender, request type or field name, since that would only imply adding a row or column to the matrix. It is flexible for different types of requests and lenders since, although all fields need to be filled, we can select the required fields for each Request Type of each Lender. Below a schematic picture of the Validations Matrix.
 
