@@ -26,6 +26,9 @@ InListValue    | Similar to ExpectedValue, but this time the constant is in the 
 ComputationValue | This is a complex type that is comprised by a constant and an operation. 
 
 #### Examples of field types
+#### Expected value
+
+Consider the following fields
 ```
     "lookup.fields.names": [
       {
@@ -36,6 +39,48 @@ ComputationValue | This is a complex type that is comprised by a constant and an
         "code": "language",
         "xpath": "clientInfo.language"
       }
+      "lookup.fields.values": [
+      {
+        "kind": "expected", //leadGen
+        "value": [
+          [1], //LENDER ONE
+          [1, 2, 3], //FORTIVA
+          [2] //LENDER TWO
+        ]
+      },
+      {
+        "kind": "inCollection", //language
+        "collection": [
+          [[1, 2, 3]], //LENDER ONE
+          [[3, 4, 5], [1, 2, 3], [5, 6, 7]], //FORTIVA
+          [[10, 11, 12]] //LENDER TWO
+        ]
+      },
+      {
+        "kind": "computation", //age
+        "computation": [
+          [
+            {
+              "operator": "lt",
+              "value": 30
+            }
+          ], //LENDER ONE
+          [
+            {
+             "operator": "lt",
+              "value": 55
+            },
+            {
+              "operator": "gt",
+              "value": 15
+            },
+            {
+              "operator": "gt",
+              "value": 21
+            }
+          ], //FORTIVA
+          [
+
 ```
 
 The ***Validations Matrix*** fulfils its purpose because it contains the proper configuration of each request type for each field name per lender; It's easy to include a new lender, request type or field name, since that would only imply adding a row or column to the matrix. It is flexible for different types of requests and lenders since, although all fields need to be filled, we can select the required fields for each Request Type of each Lender. Below a schematic picture of the Validations Matrix.
