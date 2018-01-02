@@ -15,6 +15,11 @@ The main construct behind the ability of the LS to accomodate a variety of behav
 
 ### Validations Matrix
 
+The Validations Matrix is structured as follows: For each combination of (1) Request Type; (2) Field Name and (3) Lender a specific Field Value that needs to be satisfied must be set.
 
+The field values can be of three different kinds:
+-ExpectedValue: Is a constant that needs to exactly match with the corresponding entry in the request file.
+-InListValue: Similar to ExpectedValue, but this time the constant is in the shape of a List. This is useful to stabish a range of valid values. -ComputationValue: This is a complex type that consists of a constant and an operation. Representing a computation.
+The Validations Matrix fulfils its propouse because it contains the proper configuration of each request type for each field name per lender; It's easy to include a new lender, request type or field name, since that would only imply adding a row or column to the matrix. It is flexible to different types of requests and lenders since, although all fields need to be filled, we can select the required fields for each Request Type of each Lender. Below a schematic picture of the Validations Matrix.
 
 
