@@ -11,11 +11,11 @@ The ultimate design an URL schema will follow this schema *http://lendersimulato
 
 ## Configuration
 The behavior of the ***LS*** is governed by a series of rules. Each rule has a **left-hand-side** (LHS, conditions) and a **right-hand-side** (RHS, actions). In this context the LHS matches the content of the message with specific values to determine whether the conditions match certain expectations. Once a expectation is matched then the appropriate action is triggered, in this case, a proper response is created with an optional latency. Therefore, the ***LS*** is determined by *two configuration files*: one to parse the request and one to create the response.
-The main construct behind the ability of the LS to accomodate a variety of behaviours is the Validations Matrix
+The main construct behind the ability of the ***LS*** to accomodate a variety of behaviours is the Validations Matrix
 
 ### Validations Matrix
 
-The Validations Matrix is structured as follows: For each combination of (1) Request Type; (2) Field Name and (3) Lender a specific Field Value that needs to be satisfied must be set.
+The ***Validations Matrix*** is structured as follows: For each combination of (1) *Request Type*; (2) *Field Name* and (3) *Lender* a specific *Field Value* that needs to be satisfied must be set.
 
 The field values can be of three different kinds:
 -ExpectedValue: Is a constant that needs to exactly match with the corresponding entry in the request file.
